@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="container-fluid">
+    <div class="col-lg-10 col-lg-offset-1">
+      <div class="page-header">
+        <h3 class="alert alert-info"><%= @title %></h3>
+      </div>
+      <a href="bukus/new" class="btn btn-primary">
+        <span class="glyphicon glyphicon-plus-sign"></span>
+        Add Buku
+      </a>
+      <div class="page-header">
+        <table class="table table-hover table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Idbuku</th>
+                <th>Judul</th>
+                <th>Pengarang</th>
+                <th>Penerbit</th>
+                <th>Tahun Terbit</th>
+                <th>Opsi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @bukus.each do |dataBuku| %>
+                <tr>
+                  <td><%=dataBuku.idbuku%></td>
+                  <td><%=dataBuku.judulBuku%></td>
+                  <td><%=dataBuku.namaPengarang%></td>
+                  <td><%=dataBuku.penerbit%></td>
+                  <td><%=dataBuku.tahunTerbit%></td>
+                  <th>
+                    <%= link_to "Edit", edit_buku_path(dataBuku), :class => 'btn btn-primary'%>
+                    <%= link_to "Delete", buku_path(dataBuku),
+                        method: :delete, data:{confirm: 'yakin ingin dihapus?'}, class: 'btn btn-danger'%>
+                  </th>
+                </tr>
+              <% end %>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Idbuku</th>
+                <th>Judul</th>
+                <th>Pengarang</th>
+                <th>Penerbit</th>
+                <th>Tahun Terbit</th>
+                <th>Opsi</th>
+              </tr>
+            </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idbuku: MyString
+  judulBuku: MyString
+  namaPengarang: MyString
+  penerbit: MyString
+  tahunTerbit: 1
+
+two:
+  idbuku: MyString
+  judulBuku: MyString
+  namaPengarang: MyString
+  penerbit: MyString
+  tahunTerbit: 1
